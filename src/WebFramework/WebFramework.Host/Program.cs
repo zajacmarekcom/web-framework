@@ -1,3 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using WebFramework.Host.Framework;
+using WebFramework.Host.Framework.Middleware;
 
-Console.WriteLine("Hello, World!");
+var app = WebFrameworkBuilder.CreateApplication();
+
+app.UseMiddleware<LogRequestMiddleware>();
+
+app.Run();
