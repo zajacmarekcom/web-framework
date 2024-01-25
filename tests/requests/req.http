@@ -1,0 +1,23 @@
+POST http://localhost:5000/order HTTP/1.1
+Content-Type: application/json
+    
+    {
+        "order": {
+            "id": "1",
+            "customer": "John Doe",
+            "items": [
+                {
+                    "id": "1",
+                    "name": "Item 1",
+                    "price": 10.0
+                },
+                {
+                    "id": "2",
+                    "name": "Item 2",
+                    "price": 20.0
+                }
+            ]
+        }
+    }
+
+###
