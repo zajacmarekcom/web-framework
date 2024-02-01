@@ -22,7 +22,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:5000/api/test?name=MZ&age=20 HTTP/1.1
+GET http://localhost:5000/api/test/3 HTTP/1.1
 
 ###
 
@@ -30,6 +30,12 @@ POST http://localhost:5000/api/test HTTP/1.1
 Content-Type: application/json
 
     {
-        "Name": "MZ",
-        "Age": 20
+        "Name": "Aaaa",
+        "Age": 22
     }
+
+###
+
+    GET http://localhost:5000/api/test HTTP/1.1
+
+###
