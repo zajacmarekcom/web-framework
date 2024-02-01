@@ -2,9 +2,9 @@
 
 public enum HttpMethod
 {
-    GET = 1,
-    POST,
-    PUT,
-    DELETE,
-    PATCH
+    Get = 1,
+    Post,
+    Put,
+    Delete,
+    Patch
 }

@@ -1,10 +1,24 @@
-﻿namespace WebFramework.Host.Utils.Attributes;
+﻿namespace WebFramework.Host.Framework.Attributes;
 
 [AttributeUsage(AttributeTargets.Method)]
 public class PathAttribute(string path) : Attribute
 {
-    public string Path { get; set; } = path;
+    public string Path { get; } = path;
+    public HttpMethod HttpMethod { get; protected init; } = HttpMethod.Get;
 }
 
-public class GetPathAttribute(string path) : PathAttribute(path);
-public class PostPathAttribute(string path) : PathAttribute(path);
+public class GetPathAttribute : PathAttribute
+{
+    public GetPathAttribute(string path) : base(path)
+    {
+        HttpMethod = HttpMethod.Get;
+    }
+}
+
+public class PostPathAttribute : PathAttribute
+{
+    public PostPathAttribute(string path) : base(path)
+    {
+        HttpMethod = HttpMethod.Post;
+    }
+}
